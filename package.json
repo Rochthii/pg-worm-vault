@@ -1,13 +1,14 @@
 {
   "name": "pg-worm-vault",
   "version": "1.0.0",
-  "description": "An open-source, database-enforced Write Once, Read Many (WORM) audit logging vault for PostgreSQL, featuring cryptographic SHA-256 hash-chaining.",
-  "main": "dist/worm-vault.js",
-  "types": "dist/worm-vault.d.ts",
+  "description": "An open-source, database-enforced Write Once, Read Many (WORM) audit logging vault for PostgreSQL, featuring cryptographic SHA-256 hash-chaining and a beautiful standalone Web Explorer UI.",
+  "private": true,
   "scripts": {
-    "build": "tsc",
-    "demo": "tsc && node dist/demo.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "demo": "tsc src/demo.ts --outDir dist && node dist/demo.js"
   },
   "keywords": [
     "postgresql",
@@ -16,17 +17,30 @@
     "blockchain-chaining",
     "database-security",
     "tamper-proof",
-    "immutability"
+    "immutability",
+    "nextjs",
+    "tailwind"
   ],
   "author": "Chăm Rốch Thi",
   "license": "MIT",
   "dependencies": {
+    "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
-    "pg": "^8.11.5"
+    "framer-motion": "^11.11.11",
+    "lucide-react": "^0.454.0",
+    "next": "^15.0.0",
+    "pg": "^8.11.5",
+    "react": "^19.0.0-rc-66a30550-20241107",
+    "react-dom": "^19.0.0-rc-66a30550-20241107",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "@types/pg": "^8.11.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.3.3"
   }
 }
