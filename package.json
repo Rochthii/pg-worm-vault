@@ -1,0 +1,32 @@
+{
+  "name": "pg-worm-vault",
+  "version": "1.0.0",
+  "description": "An open-source, database-enforced Write Once, Read Many (WORM) audit logging vault for PostgreSQL, featuring cryptographic SHA-256 hash-chaining.",
+  "main": "dist/worm-vault.js",
+  "types": "dist/worm-vault.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "demo": "tsc && node dist/demo.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "postgresql",
+    "audit-log",
+    "worm",
+    "blockchain-chaining",
+    "database-security",
+    "tamper-proof",
+    "immutability"
+  ],
+  "author": "Chăm Rốch Thi",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/pg": "^8.11.2",
+    "typescript": "^5.3.3"
+  }
+}
